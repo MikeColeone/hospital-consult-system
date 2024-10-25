@@ -7,7 +7,7 @@ const handleClose = () => {}
     <el-menu
       active-text-color="#ffd04b"
       background-color="#545c64"
-      class="el-menu-vertical-demo"
+      class="aside-mystyle"
       default-active="2"
       text-color="#fff"
       @open="handleOpen"
@@ -44,3 +44,8 @@ const handleClose = () => {}
     </el-menu>
   </div>
 </template>
+<style lang="less" scoped>
+.aside-mystyle {
+  height: 100%;
+}
+</style>

@@ -14,6 +14,7 @@
 - Node.js v20.16.0
 - Vue3
 - VueUse
+- element-plus UI框架
 
 ## Documents
 
@@ -22,6 +23,8 @@
 
 Update
 
+- 2024.10.21
+  - 页面布局
 - 2024.09.13
 
 **使用 `async`** 使得 `watch` 回调可以处理异步操作，如获取数据、执行网络请求等。
