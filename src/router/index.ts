@@ -1,4 +1,6 @@
 // 引入router实例
+import { pa } from 'element-plus/lib/locale/index.js'
+import path from 'path'
 import {
   createRouter,
   createWebHashHistory,
@@ -10,7 +12,11 @@ import {
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('../views/Main.vue')
+    component: () => import('../views/Main.vue'),
+    name:'main',
+    children:[
+      path:''
+    ]
   },
   {
     path: '/login',
