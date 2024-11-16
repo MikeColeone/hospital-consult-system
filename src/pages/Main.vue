@@ -13,10 +13,10 @@ import Aside from '@/components/aside.vue'
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .common-layout {
   color: rgb(5, 109, 200);
   background-color: sandybrown;
-  height: 100vh;
+  height: 100vh; //始终是浏览器高度
 }
 </style>

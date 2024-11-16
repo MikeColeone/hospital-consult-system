@@ -13,7 +13,7 @@ const handleClose = () => {}
       text-color="#fff"
       @open="handleOpen"
       @close="handleClose">
-      <p class="logo-title" style="padding: 10px">陪诊</p>
+      <p class="logo-title" style="padding: 10px">陪诊系统</p>
       <SideBarView />
     </el-menu>
   </div>
