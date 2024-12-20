@@ -1,7 +1,19 @@
 <script setup lang="ts">
-import SideBarView from './sideBarView.vue'
+import { useRouter } from 'vue-router'
+import TreeMenu from './treeMenu.vue'
+import { ref, reactive } from 'vue'
+
 const handleOpen = () => {}
 const handleClose = () => {}
+
+const router = useRouter()
+const menuData = reactive(router.options.routes[0]?.children || [])
+
+console.log('=====================================================')
+console.log(router)
+console.log('=====================================================')
+
+console.log(menuData)
 </script>
 <template>
   <div>
@@ -14,7 +26,7 @@ const handleClose = () => {}
       @open="handleOpen"
       @close="handleClose">
       <p class="logo-title" style="padding: 10px">陪诊系统</p>
-      <SideBarView />
+      <TreeMenu :index="1" :menuData="menuData" />
     </el-menu>
   </div>
 </template>
