@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import router from '@/router'
+
 const props = defineProps(['menuData', 'index'])
 // console.log(props.menuData.meta)
 console.log(JSON.stringify(props.menuData)) // 调试 props.menuData 内容
+const handleClick = (item, active) => {
+  router.push(item.meta.path)
+}
 </script>
 
 <template>
@@ -11,6 +16,7 @@ console.log(JSON.stringify(props.menuData)) // 调试 props.menuData 内容
         <!-- {{ item }} -->
 
         <el-menu-item
+          @click="handleClick(item, index)"
           v-if="!item.children || item.children.length === 0"
           :index="`${props.index}-${item.meta.id}`">
           <el-icon size="20">

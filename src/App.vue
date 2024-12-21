@@ -2,7 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template id="main">
-  <!-- 设置路由出口 -->
   <RouterView />
 </template>
 <style scoped>
