@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import router from '@/router'
+import store from '@/store'
+import type { RouteLocationAsRelativeGeneric, RouteLocationAsPathGeneric } from 'vue-router'
 
 const props = defineProps(['menuData', 'index'])
 // console.log(props.menuData.meta)
 console.log(JSON.stringify(props.menuData)) // 调试 props.menuData 内容
-const handleClick = (item, active) => {
+const handleClick = (
+  item: { meta: { path: string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric } },
+  active: any
+) => {
   router.push(item.meta.path)
+  store.commit('addMenu', item.meta)
 }
 </script>
 
